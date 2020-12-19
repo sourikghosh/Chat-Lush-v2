@@ -12,10 +12,10 @@ jobs:
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CHAT_LUSH_V2 }}'
-          api_Key: '${{ secrets.APIKEY }}'
-          app_Id: '${{ secrets.APPID }}'
-          messaging_Sender_Id: '${{ secrets.MESSAGINGSENDERID }}'
-          measurement_Id: '${{ secrets.MEASUREMENTID }}'
           projectId: chat-lush-v2
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
+          API_KEY: '${{ secrets.API_KEY }}'
+          APP_ID: '${{ secrets.APP_ID }}'
+          MESSAGING_SENDER_ID: '${{ secrets.MESSAGING_SENDER_ID }}'
+          MEASUREMENT_ID: '${{ secrets.MEASUREMENT_ID }}'
