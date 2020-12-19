@@ -10,13 +10,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  apiKey: api_Key,
+  apiKey: process.env.API_KEY,
   authDomain: "chat-lush-v2.firebaseapp.com",
   projectId: "chat-lush-v2",
   storageBucket: "chat-lush-v2.appspot.com",
-  messagingSenderId: messaging_Sender_Id,
-  appId: app_Id,
-  measurementId: measurement_Id
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
+  measurementId: process.env.MEASUREMENT_ID
 })
 
 const auth = firebase.auth();
